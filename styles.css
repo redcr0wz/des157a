@@ -31,6 +31,7 @@ h1, h2 {
     background-position-y: 35px;
     transition: background-position-y 1s ease;
     animation: shimmy 4s ease infinite;
+    cursor: pointer;
 }
 
 #banner:hover, #banner:active {
