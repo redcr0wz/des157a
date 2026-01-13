@@ -1,0 +1,147 @@
+body {
+    text-transform: uppercase;
+    font-family: "Gochi Hand", cursive;
+    background: black;
+    background: linear-gradient(0deg,rgba(38, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+#container {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: auto;
+    background: #260000;
+    background: linear-gradient(0deg,rgba(38, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    margin: 0 10px;
+}
+
+/* HEADER */
+
+#banner {
+    width: 1200px;
+    height: 250px;
+    cursor: pointer;
+    background: #ff0000;
+    background: linear-gradient(0deg,rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background-image: url("images/banner.svg");
+    background-size: cover;
+    background-position-y: 35px;
+    background-repeat: no-repeat;
+    transition: background-position-y 1s ease;
+    animation: shimmy 2s ease infinite alternate;
+}
+
+#banner:hover {
+    background-position-y: 0;
+}
+
+@keyframes shimmy {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: 20px;
+    }
+}
+
+header {
+    font-family: "New Rocker", system-ui;
+    color: white;
+}
+
+#text {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#text h1, #text h2 {
+    font-size: 24px;
+}
+
+#text h1 span {
+    animation: bounce 0.5s ease infinite alternate;
+    display: inline-block;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+section {
+    flex: 1;
+    text-align: center;
+}
+
+section h2 {
+    font-family: "Pirata One", system-ui;
+    color: red;
+    background-color: black;
+    border: 3px solid red;
+    display: block;
+    font-size: 24px;
+    filter: drop-shadow(5px 5px 0 red);
+    padding: 15px;
+    transition: letter-spacing 0.5s ease;
+}
+
+section h2:hover {
+    letter-spacing: 3px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li a {
+    display: block;
+    color: black;
+    background-color: red;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    filter: drop-shadow(5px 5px 0 #260000);
+    border: 2px solid red;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section ul li a:hover {
+    background-color: black;
+    color: red;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: red;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
