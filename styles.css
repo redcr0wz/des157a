@@ -17,8 +17,6 @@ h1, h2 {
 #container {
     max-width: 1200px;
     margin: auto;
-    background: #260000;
-    background: linear-gradient(0deg,rgba(38, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
     margin: 0 20px;
 }
 
