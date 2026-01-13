@@ -5,6 +5,7 @@ body {
     background: linear-gradient(0deg,rgba(38, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 h1, h2 {
@@ -13,41 +14,40 @@ h1, h2 {
 
 #container {
     max-width: 1200px;
-    min-width: 800px;
     margin: auto;
     background: #260000;
     background: linear-gradient(0deg,rgba(38, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 /* HEADER */
 
 #banner {
-    width: 1200px;
     height: 250px;
-    cursor: pointer;
-    background: #ff0000;
-    background: linear-gradient(0deg,rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
     background-image: url("images/banner.svg");
     background-size: cover;
-    background-position-y: 35px;
+    background-position: 75% 10%;
     background-repeat: no-repeat;
+    background-position-y: 35px;
     transition: background-position-y 1s ease;
-    animation: shimmy 2s ease infinite alternate;
+    animation: shimmy 4s ease infinite;
 }
 
-#banner:hover {
+#banner:hover, #banner:active {
     background-position-y: 0;
-}
+} 
 
 @keyframes shimmy {
-    from {
-        background-position-x: 0;
+    0% {
+        background-position-x: 77%;
     }
-    to {
-        background-position-x: 20px;
+    50% {
+        background-position-x: 83%;
     }
-}
+    100% {
+        background-position-x: 77%;
+    }
+} 
 
 header {
     font-family: "New Rocker", system-ui;
@@ -56,8 +56,8 @@ header {
 
 #text {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
 }
 
 #text h1, #text h2 {
@@ -81,13 +81,11 @@ header {
 /* MAIN */
 
 main {
-    display: flex;
     gap: 15px;
     justify-content: center;
 }
 
 section {
-    flex: 1;
     text-align: center;
 }
 
@@ -103,7 +101,7 @@ section h2 {
     transition: letter-spacing 0.5s ease;
 }
 
-section h2:hover {
+section h2:hover, section h2:active {
     letter-spacing: 3px;
 }
 
@@ -125,7 +123,7 @@ section ul li a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-section ul li a:hover {
+section ul li a:hover, section ul li a:active {
     background-color: black;
     color: red;
 }
@@ -142,6 +140,43 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover, footer a:active {
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        display: flex;
+        min-width: 300px;
+        max-width: 1200px;
+    }
+    section {
+        flex: 1;
+    }
+    #banner {
+        background-image: url("images/banner.svg");
+        background-size: cover;
+        background-position: 75% 10%;
+        background-repeat: no-repeat;
+        background-position-y: 35px;
+        transition: background-position-y 1s ease;
+        animation: shimmy 4s ease infinite;
+    }
+    #text {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    main { 
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    #text {
+        flex-direction: column;
+        text-align: center;
+    }
 }
