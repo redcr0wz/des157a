@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console!</h2>
+    <h2>To open the console, you right click and press "Inspect", then click on the "Console" tab to see the functionality of the code.</h2>
+
+    <script>
+        /* 
+        My program prompts the user to put in a number.
+        The program then says if they guessed my favorite number or not, stating the difference.
+        The program also checks if the user did not enter in a number at all (with the exception of "twenty seven" and variants).
+        */
+
+       var userNumber = prompt('Guess my favorite number!');
+       difference = 27 - userNumber;
+
+       if (userNumber == 27) {
+            console.log('You got my favorite number! :D');
+       } else if (userNumber == 'twenty seven' || userNumber == 'twenty-seven' || userNumber == 'twentyseven') {
+            console.log('You somehow wrote out my favorite number! Yay! :D')
+       } else if (isNaN(userNumber)) {
+            console.log(`I fear that\'s not a number! :( Refresh and enter a number, silly goose!`);
+       } else {
+            console.log(`So close! You are ${difference} away from my favorite number!`);
+       }
+    </script>
+</body>
+</html>
