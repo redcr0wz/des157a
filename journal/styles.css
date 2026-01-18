@@ -1,0 +1,68 @@
+img {
+    display: block;
+}
+
+h1, h2 {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    color: rgb(255, 248, 248);
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+header {
+    flex: 1;
+    text-align: right;
+    background-color: rgb(40, 0, 0);
+    padding: 20px 40px 25px 20px;
+}
+
+date {
+    font-family: "Rubik", sans-serif;
+    color: rgb(255, 248, 248);
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    gap: 3em;
+    background-color: rgb(247, 235, 235);
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex: 2;
+    flex-direction: column;
+}
+
+p {
+    color: rgb(40, 0, 0);
+    line-height: 1.4em;
+    /* padding-left: 40px; */
+    font-size: 1em;
+}
+
+a {
+    color: rgb(171, 14, 14);
+}
+
+.article-header {
+    background-color: rgb(40, 0, 0);
+    padding: 3px 20px 20px 40px;
+}
+
+.body-text {
+    width: 55%;
+}
