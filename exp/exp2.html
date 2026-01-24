@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+     <header>
+          <h1>Experiment 2</h1>
+     </header>
+     
+     <div id="colors">
+     </div>
+
+    <script>
+     /* 
+     My program prompts the user if they would like a color.
+     If the user responds with anything other than no,
+     the values of Red, Blue, and Green in RGB color codes are randomized 
+     and are projected onto the site background.
+
+     Otherwise, the background is black and the user does not get a color.
+     */
+
+     var red;
+     var green;
+     var blue;
+
+     var myColorsDiv = document.querySelector('#colors');
+
+     // Random Integer Function
+     function randomInt(min, max) {
+          return Math.floor((max - min + 1) * Math.random()) + min;
+     }
+
+     // prompt user
+     var answer = prompt('Would you like a color?', '');
+
+     if (answer.toLowerCase() == 'no' || answer.toLowerCase() == 'nope' 
+     || answer.toLowerCase() == 'nah' || answer.toLowerCase() == 'no thank you') {
+          red = 0;
+          green = 0;
+          blue = 0;
+
+          myColorsDiv.innerHTML =  '<h2>No color for you.</h2>';
+     } else {
+          // Random RGB values
+          red = randomInt(0, 255); 
+          green  = randomInt(0, 255); 
+          blue = randomInt(0, 255);
+
+           // Post RGB values onto page
+          myColorsDiv.innerHTML = 
+          `<h2>Your random color is...</h2>
+          <h2>${red} RED</h2> 
+          <h2>${green} GREEN</h2> 
+          <h2>${blue} BLUE</h2>`;
+     }
+
+     // set background color
+     var background = document.querySelector('body');
+     background.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+    </script>
+</body>
+</html>
