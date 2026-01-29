@@ -39,9 +39,7 @@ body {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 600px;
     max-width: 1200px;
     flex: 2;
     flex-direction: column;
@@ -56,6 +54,11 @@ p {
 
 a {
     color: rgb(171, 14, 14);
+}
+
+article {
+    padding-top: 25x;
+    padding-bottom: 50px;
 }
 
 .article-header {
