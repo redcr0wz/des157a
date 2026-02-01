@@ -125,7 +125,7 @@ button {
 
 #section-1 { 
     background-image: url(images/notepad.jpg); 
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 #section-2 { 
