@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Metal+Mania&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="script.js" defer></script>  -->
+    <script src="script.js" defer></script> 
     <title>METAL MAD LIBS</title>
 </head>
 <body>
@@ -20,9 +20,8 @@
         <h2>if you dare...</h2>
     </header>
     <main>
-        <section id="section-1" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+        <form>
+            <section id="section-1" class="notebook showing">
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="place"> 
@@ -30,25 +29,21 @@
                     </label>
                 </h2>
                 <input type="text" name="place" id="place" placeholder= "any place." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-2" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-1"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-2" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-1"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="verb"> 
-                        VERB
+                        VERB ENDING IN -ING
                     </label>
                 </h2> 
                 <input type="text" name="verb" id="verb" placeholder= "action ending in -ing." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-3" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-2"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-3" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-2"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME AN...</h3>
                 <h2>
                     <label for="animal"> 
@@ -56,12 +51,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="animal" id="animal" placeholder= "any organism." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-4" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-3"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-4" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-3"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="tragic-event"> 
@@ -69,12 +62,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="tragic-event" id="tragic-event" placeholder= "an incident." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-5" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-4"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-5" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-4"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="negative-emotion"> 
@@ -82,12 +73,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="negative-emotion" id="negative-emotion" placeholder= "in noun form (like anger)." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-6" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-5"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-6" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-5"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="vulgar-exclamation"> 
@@ -95,12 +84,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="vulgar-exclamation" id="vulgar-exclamation" placeholder= "as vulgar as you want." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-7" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-6"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-7" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-6"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="time-period"> 
@@ -108,12 +95,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="time-period" id="time-period" placeholder= "time period, time interval, etc." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-8" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-7"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-8" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-7"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME...</h3>
                 <h2>
                     <label for="something-scary"> 
@@ -121,12 +106,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="something-scary" id="something-scary" placeholder= "eek." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-9" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-8"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-9" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-8"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>GIVE ME A...</h3>
                 <h2>
                     <label for="plural-noun"> 
@@ -134,12 +117,10 @@
                     </label>
                 </h2> 
                 <input type="text" name="plural-noun" id="plural-noun" placeholder= "person, place, or thing, but multiple." required>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
-        <section id="section-10" class="notebook">
-            <form>
-                <button type="button" class="backbtn"><img src="images/larrow.svg" alt="left arrow"></button>
+                <button class="nextbtn" id="next-9"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+            <section id="section-10" class="notebook hidden">
+                <button type="button" class="backbtn" id="back-9"><img src="images/larrow.svg" alt="left arrow"></button>
                 <h3>NOW...</h3>
                 <h2>
                     <label for="before-word"> 
@@ -150,23 +131,14 @@
                     <!-- javascript to put in options -->
                     <option value="">if you dare.</option>
                 </select>
-                <button type="submit" class="nextbtn"><img src="images/rarrow.svg" alt="right arrow"></button>
-            </form>
-        </section>
+                <button type="submit" class="nextbtn" id="submit"><img src="images/rarrow.svg" alt="right arrow"></button>
+            </section>
+        </form>
 
-        <section id="final-madlib">
+        <section id="final-madlib" class="hidden">
+            <button type="button" class="backbtn" id="back-10"><img src="images/larrow.svg" alt="left arrow"></button>
             <article id="lyrics">
-                <h2><span>[word used before]</span></h2> 
-                <h3>BY THE <span>[plural noun]</span></h3>
-
-                <p>IN THE DEPTHS OF <span>[place]</span></p>
-                <p><span>[verbing]</span> IN SILENCE</p>
-                <p>COMES A DEADLY <span>[animal]</span></p>
-                <p>LIKE <span>[tragic event]</span> REBORN</p>
-                <p>NOW HUMANITY BRINGS <br><span>[negative emotion as a noun]</span></p>
-                <p><span>[vulgar exclamation]</span>!</p>
-                <p>EVERY <span>[time period]</span></p>
-                <p>TO BRING <span>[something scary]</span></p>
+                <!-- inner html -->
             </article>
         </section>
     </main>

@@ -1,11 +1,11 @@
 body {
     background-image: url(images/form1bg.jpg);
-    /* background-image: url(images/finalbg.jpg); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+    transition: all 1s ease;
 }
 
 header h1 {
@@ -19,7 +19,7 @@ header h1 {
 }
 
 header h2 {
-        font-family: "Metal Mania", system-ui;
+    font-family: "Metal Mania", system-ui;
     text-align: center;
     font-size: 28px;
     font-weight: 400;
@@ -28,10 +28,18 @@ header h2 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
 }
 
+header {
+    transition: all 1s ease;
+}
+
 main {
     display: flex;
     align-items: center;
     padding-top: 40px;
+}
+
+main section {
+    transition: all 1s ease;
 }
 
 h1, h2, h3 {
@@ -50,15 +58,17 @@ section {
 button {
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 #final-madlib {
-    visibility: hidden;
     flex: 1;
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    right: 80px;
+    right: 90px;
+    top: 80px;
+    transition: all 1s ease;
 }
 
 #final-madlib h2, #final-madlib h3 {
@@ -72,6 +82,7 @@ button {
 
 #final-madlib span {
     color: #F84B45;
+    text-transform: uppercase;
 }
 
 #lyrics {
@@ -88,17 +99,14 @@ button {
     border-bottom: 20px solid #1E1E1E;
     border-radius: 0 20px 20px 0;
     background: #FFF8EC;
-    padding: 30px;
-    width: 400px;
+    padding: 20px;
+    width: 350px;
     height: 500px;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     visibility: visible;
-}
-
-.notebook form {
-    padding-left: 80px;
+    padding-left: 120px;
 }
 
 .notebook h2 {
@@ -121,6 +129,11 @@ button {
     border: solid 2px black;
     font-family: "Shadows Into Light Two", cursive;
     text-transform: lowercase;
+}
+
+.notebook input:focus {
+    border: 3px solid #F84B45;
+    outline: none;
 }
 
 #section-1 { 
@@ -164,7 +177,9 @@ button {
     background-image: url(images/notepad.jpg);  
 }
 
-/* TODO: add slide transitions */
+#back-10 {
+    filter: drop-shadow(0 0 3px #F84B45);
+}
 
 .backbtn {
     position: absolute;
@@ -178,4 +193,25 @@ button {
     right: 15px;
 }
 
+.hidden {
+    left: -100vh;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.moveLeft {
+    left: -100vh;
+    visibility: visible;
+}
+
+.moveLeft {
+    right: 0;
+    visibility: visible;
+}
 
