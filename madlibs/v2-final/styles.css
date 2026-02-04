@@ -1,0 +1,181 @@
+body {
+    background-image: url(images/form1bg.jpg);
+    /* background-image: url(images/finalbg.jpg); */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+header h1 {
+    font-family: "Metal Mania", system-ui;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+    padding-top: 30px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+}
+
+header h2 {
+        font-family: "Metal Mania", system-ui;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    padding-top: 5px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+h1, h2, h3 {
+    font-family: "Knewave", system-ui;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+#final-madlib {
+    visibility: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 80px;
+}
+
+#final-madlib h2, #final-madlib h3 {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 500;
+}
+
+#final-madlib h3 {
+    font-size: 20px;
+}
+
+#final-madlib span {
+    color: #F84B45;
+}
+
+#lyrics {
+    font-family: "Metal Mania", system-ui;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    font-size: 28px;
+}
+
+.notebook {
+    border-top: 20px solid #1E1E1E;
+    border-right: 20px solid #1E1E1E;
+    border-bottom: 20px solid #1E1E1E;
+    border-radius: 0 20px 20px 0;
+    background: #FFF8EC;
+    padding: 30px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    visibility: visible;
+}
+
+.notebook form {
+    padding-left: 80px;
+}
+
+.notebook h2 {
+    font-size: 34px;
+    position: absolute;
+    top: 190px;
+}
+
+.notebook h3 {
+    position: absolute;
+    top: 165px;
+}
+
+.notebook input, .notebook select {
+    font-size: 24px;
+    height: 50px;
+    width: 340px;
+    position: absolute;
+    top: 265px;
+    border: solid 2px black;
+    font-family: "Shadows Into Light Two", cursive;
+    text-transform: lowercase;
+}
+
+#section-1 { 
+    background-image: url(images/notepad.jpg); 
+    z-index: 1;
+}
+
+#section-2 { 
+    background-image: url(images/notepad.jpg);
+}
+
+#section-3 { 
+    background-image: url(images/notepad.jpg); 
+}
+
+#section-4 { 
+    background-image: url(images/notepad.jpg); 
+}
+
+#section-5 { 
+    background-image: url(images/notepad.jpg); 
+}
+
+#section-6 { 
+    background-image: url(images/notepad.jpg);
+}
+
+#section-7 { 
+    background-image: url(images/notepad.jpg); 
+}
+
+#section-8 { 
+    background-image: url(images/notepad.jpg);
+}
+
+#section-9 { 
+    background-image: url(images/notepad.jpg); 
+}
+
+#section-10 { 
+    background-image: url(images/notepad.jpg);  
+}
+
+/* TODO: add slide transitions */
+
+.backbtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.nextbtn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+
