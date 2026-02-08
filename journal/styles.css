@@ -39,10 +39,12 @@ body {
 }
 
 main {
-    margin-top: 600px;
+    margin-top: 1820px;
     max-width: 1200px;
     flex: 2;
     flex-direction: column;
+    justify-content: center;
+    display:flex;
 }
 
 p {
