@@ -1,0 +1,45 @@
+img {
+    display: block;
+}
+
+body {
+    background-image: url(images/frame.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #0F0F17;
+}
+
+.container {
+    background-color: #556BC1;
+    position: relative;
+    display: inline-block;
+    cursor: crosshair;
+}
+
+.container img {
+    position: absolute;
+    top: 105px;
+    left: 164px;
+    object-fit: cover;
+    width: 974px;
+    height: 490px;
+    border-radius: 30px;
+}
+
+.zoom-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #556BC1;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+.zoom-circle.active {
+    opacity: 1;
+}
