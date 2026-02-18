@@ -51,8 +51,8 @@ body {
 
 article {
     position: fixed; 
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     width: 100%;
     height: 100%;
     top: 0;
