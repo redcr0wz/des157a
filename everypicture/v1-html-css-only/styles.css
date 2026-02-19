@@ -10,7 +10,7 @@ img, svg {
 }
 
 svg {
-    z-index: 1;
+    z-index: 1000;
 }
 
 body {
