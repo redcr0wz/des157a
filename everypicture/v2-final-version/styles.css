@@ -9,16 +9,22 @@ img, svg {
     width: 100%;
 }
 
-svg {
+svg, .hidden {
     opacity: 0;
 }
 
-#frame svg rect:hover {
+#container svg {
+    z-index: 1;
+    position: absolute;
+    top: -280px;
+}
+
+rect, ellipse, path {
     cursor: pointer;
 }
 
 body {
-    background-color: #0F0F17;
+    background-color: #07070b;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -34,13 +40,13 @@ body {
     border-radius: 20px;
     aspect-ratio: 1200/750;
     position: relative;
+    scale: 90%;
 }
 
 #container {
     background-color: #556BC1;
     position: absolute;
     display: inline-block;
-    cursor: crosshair;
     top: 115px;
     left: 164px;
     width: 974px;
@@ -50,17 +56,16 @@ body {
 }
 
 #frame {
-    transition: border 1s ease-in;
+    transition: all 1s ease-in-out;
     border: 0px solid #556BC1;
 }
 
-#frame:hover, #frame:active {
+#frame:hover {
     border: 3px solid #556BC1;
+    transform: scale(102%);
 }
 
-#container img {
-    object-fit: cover;
-}
+/* todo in javascript */
 
 article {
     position: fixed; 
@@ -72,20 +77,21 @@ article {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); 
-    z-index: 1; 
     justify-content: center;
     align-items: center;
 }
 
 article.active {
-    z-index: 100;
+    z-index: 2;
     display: flex;
 }
 
 article .container {
-    background-color: blanchedalmond;
+    background-color: #0f0f17;
     width: 500px;
     border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .content img {
@@ -111,10 +117,11 @@ article h3 {
     justify-content: space-between;
 }
 
-.content p {
+.content .text {
     flex: 1;
     max-width: 40%;
     font-family: "Source Code Pro", monospace;
+    font-size: 1em;
 }
 
 .content {
@@ -129,13 +136,22 @@ button {
     border: 0;
     width: 25px;
     height: 25px;
-    z-index: 3;
-}
-
-button:hover { 
-    cursor: pointer;
 }
 
 .x {
     margin: 10px;
+    cursor: pointer;
 }
+
+#frame h1 {
+    margin: 0;
+    padding: 0;
+    padding: 20px 0 30px 30px;
+    color: #556BC1;;
+    font-family: "Sarpanch", sans-serif;
+    font-size: 36px;
+}
+ header {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+ }
