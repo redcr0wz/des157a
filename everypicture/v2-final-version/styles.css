@@ -7,6 +7,7 @@ img, svg {
     top: 0;
     left: 0;
     width: 100%;
+    transition: all 1s ease-in-out;
 }
 
 svg, .hidden {
@@ -53,6 +54,13 @@ body {
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1em;
+    color: white;
+    line-height: 1.5em;
 }
 
 #frame {
@@ -64,8 +72,6 @@ body {
     border: 3px solid #556BC1;
     transform: scale(102%);
 }
-
-/* todo in javascript */
 
 article {
     position: fixed; 
@@ -117,11 +123,15 @@ article h3 {
     justify-content: space-between;
 }
 
-.content .text {
+.content #popup-text {
     flex: 1;
     max-width: 40%;
     font-family: "Source Code Pro", monospace;
     font-size: 1em;
+}
+
+.content #popup-text a{
+    color: #556BC1;
 }
 
 .content {
@@ -151,7 +161,8 @@ button {
     font-family: "Sarpanch", sans-serif;
     font-size: 36px;
 }
- header {
+
+header {
     opacity: 1;
     transition: opacity 1s ease-in-out;
- }
+}
