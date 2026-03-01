@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Console', monospace;
+    margin: auto;
+    max-width: 800px;
+    padding: 4em 0 4em 0;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
