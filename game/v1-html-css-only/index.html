@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- FONTS -->
+    
+    <!-- CSS AND JAVASCRIPT -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script>  -->
+    <title>Game On! - Blackjack</title>
+</head>
+<body>
+    <button id="settings">
+		Settings
+	</button>
+
+    <div id="start">
+        <h1>Blackjack</h1>
+        <button id="rules">
+			Rules
+		</button>
+        <button id="startgame">
+			Play
+		</button>
+    </div>
+
+    <div id="bets">
+        <h1>Bet?</h1>
+        <input type="text" id="fname" name="fname">
+        <input type="submit" value="BET!">
+        <button id="back">
+			Back
+		</button>
+    </div>
+
+    <div id="game">
+        <div id="house">
+            <!-- cards -->
+        </div>
+
+        <div id="actions">
+            <button id="hit">
+                Hit
+            </button>
+            <button id="stand">
+                Stand
+            </button>
+            <button id="split">
+                Split
+            </button>
+        </div>
+
+        <div id="cards">
+            <!-- cards -->
+        </div>
+
+        <div id="money">
+            <h3>BET</h3>
+            <p>$</p>
+
+            <h3>FUNDS</h3>
+            <p>$</p>
+        </div>
+    </div>
+
+    <div id="end-screen">
+        <h1>YOU WIN/LOSE!</h1>
+        <button id="startgame">
+			Play
+		</button>
+        <button id="quit">
+			Quit
+		</button>
+    </div>
+
+    <div id="rules" class="hidden modal">
+        <button id="close">Close</button>
+        <h2>Rules</h2>
+        <p>In Blackjack, you play against the dealer. 
+        <br>
+        Players receive all cards face up, and the dealer’s first card is face up and the second is face down. The object of the game is to get closer to 21 than the dealer without going over 21. 
+        <br>
+        If a hand goes over 21, it is called a “bust” or “break,” and the wager is lost. In 21, Jacks, Queens, Kings, and 10s count as 10. An Ace may be played as a one or an 11. All other cards are played at face value.
+        <br>
+        When you receive your first two cards, you may either “hit” or “stand.” 
+        <br>
+        When you "hit", you recieve another card. You may draw as many cards as you want until you are close to 21 or until you “bust.”
+        <br>
+        When you “stand,” it means you feel you are close enough to 21 and no longer wish any additional cards, indicated by waving off with your hand. 
+        <br>
+        If you are closer to 21 than the dealer, you win and are paid an amount equal to your original wager. If your hand is less than the dealer’s, you lose. If the dealer’s hand “busts” or “breaks,” you win as well. 
+        <br>
+        Ties are a standoff or “push,” and your bet remains on the table.</p>
+    </div>
+
+    <div id="settings" class="modal">
+        <button id="close">
+            Close
+        </button>
+        <h2>Settings</h2>
+        <button id="rules">
+			Rules
+		</button>
+        <button id="music">
+			Music
+		</button>
+        <button id="quit">
+			Quit
+		</button>
+    </div>
+</body>
+</html>

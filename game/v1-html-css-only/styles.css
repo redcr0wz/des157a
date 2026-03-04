@@ -1,0 +1,17 @@
+img {
+    display: block;
+}
+
+body {
+    background: #1A1D27;
+    background: linear-gradient(180deg,rgba(26, 29, 39, 1) 0%, rgba(33, 40, 65, 1) 50%);
+    height: 100vh;
+}
+
+.active {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
