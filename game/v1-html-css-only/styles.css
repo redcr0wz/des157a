@@ -5,7 +5,6 @@ img {
 body {
     background: #1A1D27;
     background: linear-gradient(180deg,rgba(26, 29, 39, 1) 0%, rgba(33, 40, 65, 1) 50%);
-    height: 100vh;
 }
 
 .active {
@@ -14,4 +13,23 @@ body {
 
 .hidden {
     opacity: 0;
+    visibility: hidden;
+}
+
+button {
+    cursor: pointer;
+    background-color: #E93232;
+    border-radius: 5%;
+    border: 0;
+    padding: 10px;
+    color: #FEF8EC;
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+}
+
+#settings-button {
+    border-radius: 50%;
+    border: 0;
+    background-color: #ECFEFC;
+    aspect-ratio: 1;
 }
