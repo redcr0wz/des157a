@@ -5,21 +5,27 @@ img {
 body {
     background: #1A1D27;
     background: linear-gradient(180deg,rgba(26, 29, 39, 1) 0%, rgba(33, 40, 65, 1) 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .active {
     opacity: 1;
+    display: flex;
 }
 
 .hidden {
     opacity: 0;
     visibility: hidden;
+    display: none;
 }
 
-button {
+button, input[type="submit"] {
     cursor: pointer;
     background-color: #E93232;
-    border-radius: 5%;
+    border-radius: 5px;
     border: 0;
     padding: 10px;
     color: #FEF8EC;
@@ -27,9 +33,180 @@ button {
     text-transform: uppercase;
 }
 
+input[type="number"] {
+    font-family: "Outfit", sans-serif;
+    background-color: #ECFEFC;
+    border-radius: 5%;
+    border: 0;
+    padding: 10px;
+    width: 80px;
+}
+
 #settings-button {
+    position: absolute;
+    top: 0;
+    right: 0;
     border-radius: 50%;
     border: 0;
     background-color: #ECFEFC;
     aspect-ratio: 1;
+    scale: 60%
+}
+
+h1, h2, h3 {
+    font-family: 'League Gothic', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h1, h2 {
+    color: #ECFEFC;
+}
+
+h3 {
+    color: #2C2370;
+}
+
+p, span {
+    color: #ECFEFC;
+    font-family: "Outfit", sans-serif;
+}
+
+#bets span {
+    font-size: 1.5em;
+}
+
+#money h3 {
+    background-color: #ECFEFC;
+    border-radius: 5%;
+    border: 0;
+    padding: 10px;
+    display: inline;
+}
+
+#close {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 25px;
+    padding: 0;
+}
+
+.modal {
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-container {
+    background-color: #FEF8EC;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.modal #close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+}
+
+.modal h2 {
+    color: #2C2370;
+    font-size: 2em;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.modal button {
+    position: relative;
+    top: -25px;
+    margin: 5px;
+    width: 200px;
+}
+
+.modal p {
+    color: #2C2370;
+    text-align: left;
+}
+
+#rules-popup .modal-container {
+    width: 500px;
+}
+
+#start {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+#start img {
+    position: absolute;
+    right: 300px;
+    width: 250px;
+}
+
+#bets img {
+    position: absolute;
+    top: 300px;
+    right: 300px;
+    width: 250px;
+}
+
+h1 {
+    color: #FEF8EC;
+    font-size: 100px;
+    margin: 0;
+    text-align: center;
+}
+
+#start #rules {
+    width: 300px;
+}
+
+#startgame {
+    font-size: 50px;
+    width: 500px;
+}
+
+#bets {
+    align-items: center;
+    text-align: center;
+}
+
+#back {
+    margin-top: 20px;
+}
+
+#betting {
+    margin-top: 20px;
+    scale: 200%;
+}
+
+#end-screen {
+    text-align: center;
+}
+
+#quit {
+    margin-top: 10px;
 }
