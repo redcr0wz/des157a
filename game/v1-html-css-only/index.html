@@ -23,10 +23,10 @@
     <div id="start" class="hidden">
         <h1>Blackjack</h1>
         <img src="images/logo.jpg" alt="blackjack cards">
-        <button id="rules">
+        <button class="rules">
 			Rules
 		</button>
-        <button id="startgame">
+        <button class="startigame">
 			Play
 		</button>
     </div>
@@ -35,7 +35,7 @@
         <h1>Bet?</h1>
         <img src="images/chips.jpg" alt="chips">
         <div id="betting">
-            <span>$ </span><input type="number" id="bet" name="bets">
+            <span>$ </span><input type="number" id="bet-money" name="bets">
             <input type="submit" value="BET!" id="bet"> 
         </div>
         <br>
@@ -45,53 +45,97 @@
     </div>
 
     <div id="game">
+        <div id="table"></div>
         <div id="house">
             <div id="house-total">
-                <h3>#</h3>
+                <h3>17</h3>
                 <span>TOTAL</span>
             </div>
-            <div id="table-cards"></div>
-            <div id="table">
+
+            <div id="house-cards">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <p class="card-number black">7</p>
+                        <img src="images/spade.svg" alt="spade">
+                        </div>
+                        <div class="flip-card-back">
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <p class="card-number black">Q</p>
+                        <img src="images/club.svg" alt="club">
+                        </div>
+                        <div class="flip-card-back">
+                        
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="actions">
-            <button id="hit">
-                Hit
-            </button>
-            <button id="stand">
-                Stand
-            </button>
-            <br>
-            <button id="split">
-                Split
-            </button>
+            <div id="main-actions">
+                <button id="hit">Hit <img src="images/hit.svg" alt="hit"></button>
+                <button id="stand">Stand <img src="images/stand.svg" alt="stand"></button>
+            </div>
+
+            <button id="split">Split <img src="images/split.svg" alt="split"></button>
         </div>
 
         <div id="cards">
             <div id="player-total">
-                <h3>#</h3>
+                <h3>21</h3>
                 <span>TOTAL</span>
             </div>
-            <!-- cards -->
+            <div id="player-cards">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <p class="card-number red">J</p>
+                        <img src="images/heart.svg" alt="heart">
+                        </div>
+                        <div class="flip-card-back">
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <p class="card-number red">A</p>
+                        <img src="images/diamond.svg" alt="diamond">
+                        </div>
+                        <div class="flip-card-back">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="money">
             <h3>BET</h3>
-            <p>$</p>
+            <p>$100</p>
 
             <h3>FUNDS</h3>
-            <p>$</p>
+            <p>$200</p>
         </div>
     </div>
 
     <div id="end-screen" class="hidden">
         <h1>YOU WIN/LOSE!</h1>
-        <button id="startgame">
+        <button class="start-game">
 			Play Again?
 		</button>
         <br>
-        <button id="quit">
+        <button class="quit">
 			Quit
 		</button>
     </div>
@@ -122,13 +166,13 @@
         <div class="modal-container">
             <button id="close">&#x2715;</button>
             <h2>Settings</h2>
-            <button id="rules">
+            <button class="rules">
                 Rules
             </button>
             <button id="music">
                 Music
             </button>
-            <button id="quit">
+            <button class="quit">
                 Quit
             </button>
         </div>
