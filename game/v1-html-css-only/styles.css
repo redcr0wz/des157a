@@ -178,10 +178,16 @@ span {
 }
 
 #start img {
-	position: absolute;
-	right: 210px;
+    position: absolute;
 	width: 250px;
 	z-index: 0;
+    right: -220px;
+    top: -50px;
+}
+
+#logo {
+    position: relative;
+    display: flex;
 }
 
 #start h1,
@@ -189,10 +195,14 @@ span {
 	z-index: 1;
 }
 
+#start h1 {
+    text-shadow: 1px 2px 5px #2c23706b;;
+}
+
 #bets img {
 	position: absolute;
-	top: 300px;
-	right: 300px;
+	top: 260px;
+	right: 200px;
 	width: 250px;
 }
 
