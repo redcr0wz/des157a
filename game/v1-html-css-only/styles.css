@@ -172,8 +172,13 @@ p, span {
 
 #start img {
     position: absolute;
-    right: 300px;
+    right: 210px;
     width: 250px;
+    z-index: 0;
+}
+
+#start h1, #start button {
+    z-index: 1;
 }
 
 #bets img {
@@ -199,9 +204,12 @@ h1 {
     width: 500px;
 }
 
-#bets {
+#bets, #start, #end-screen {
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
+    height: 100vh;
 }
 
 #back {
@@ -334,7 +342,6 @@ h1 {
 #game {
     width: 100%;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
