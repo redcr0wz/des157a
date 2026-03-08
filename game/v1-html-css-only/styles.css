@@ -3,8 +3,8 @@ img {
 }
 
 body {
-    background: #1A1D27;
-    background: linear-gradient(180deg,rgba(26, 29, 39, 1) 0%, rgba(33, 40, 65, 1) 50%);
+    background: #1a1d27;
+    background: linear-gradient(180deg, rgba(26, 29, 39, 1) 0%, rgba(33, 40, 65, 1) 50%);
     height: 100vh;
 }
 
@@ -19,26 +19,28 @@ body {
     display: none;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
     cursor: pointer;
-    background-color: #E93232;
+    background-color: #e93232;
     border-radius: 5px;
     border: 0;
     padding: 10px;
-    color: #FEF8EC;
+    color: #fef8ec;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
     transition: background-color 0.5s ease-in-out;
     box-sizing: border-box;
 }
 
-button:hover, button:active {
+button:hover,
+button:active {
     background-color: #990000;
 }
 
 input[type="number"] {
     font-family: "Outfit", sans-serif;
-    background-color: #ECFEFC;
+    background-color: #ecfefc;
     border-radius: 5%;
     border: 0;
     padding: 10px;
@@ -51,34 +53,39 @@ input[type="number"] {
     right: 0;
     border-radius: 50%;
     border: 0;
-    background-color: #ECFEFC;
+    background-color: #ecfefc;
     aspect-ratio: 1;
     scale: 60%;
     z-index: 1;
 }
 
-h1, h2, h3 {
-    font-family: 'League Gothic', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "League Gothic", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-h1, h2 {
-    color: #ECFEFC;
+h1,
+h2 {
+    color: #ecfefc;
 }
 
-#house-total h3, #player-total h3 {
-    color: #2C2370;
+#house-total h3,
+#player-total h3 {
+    color: #2c2370;
     font-size: 36px;
     margin: 0;
 }
 
 h3 {
-    color: #2C2370;
+    color: #2c2370;
 }
 
-p, span {
-    color: #ECFEFC;
+p,
+span {
+    color: #ecfefc;
     font-family: "Outfit", sans-serif;
 }
 
@@ -87,7 +94,7 @@ p, span {
 }
 
 #money h3 {
-    background-color: #ECFEFC;
+    background-color: #ecfefc;
     border-radius: 5%;
     border: 0;
     padding: 7px;
@@ -102,15 +109,15 @@ p, span {
 }
 
 .modal {
-    position: fixed; 
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); 
-    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
     justify-content: center;
     align-items: center;
 }
@@ -120,11 +127,11 @@ p, span {
 }
 
 .modal-container {
-    background-color: #FEF8EC;
+    background-color: #fef8ec;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    margin:auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +147,7 @@ p, span {
 }
 
 .modal h2 {
-    color: #2C2370;
+    color: #2c2370;
     font-size: 2em;
     position: relative;
     text-align: center;
@@ -155,7 +162,7 @@ p, span {
 }
 
 .modal p {
-    color: #2C2370;
+    color: #2c2370;
     text-align: left;
 }
 
@@ -177,7 +184,8 @@ p, span {
     z-index: 0;
 }
 
-#start h1, #start button {
+#start h1,
+#start button {
     z-index: 1;
 }
 
@@ -189,7 +197,7 @@ p, span {
 }
 
 h1 {
-    color: #FEF8EC;
+    color: #fef8ec;
     font-size: 100px;
     margin: 0;
     text-align: center;
@@ -204,7 +212,9 @@ h1 {
     width: 500px;
 }
 
-#bets, #start, #end-screen {
+#bets,
+#start,
+#end-screen {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -233,7 +243,7 @@ h1 {
     position: absolute;
     bottom: 50px;
     left: 40px;
-    scale: 150%
+    scale: 150%;
 }
 
 #money p {
@@ -241,8 +251,9 @@ h1 {
     padding: 0 0 20px 0;
 }
 
-#player-total, #house-total {
-    background-color: #ECFEFC;
+#player-total,
+#house-total {
+    background-color: #ecfefc;
     aspect-ratio: 1;
     border-radius: 50%;
     display: flex;
@@ -266,10 +277,11 @@ h1 {
     top: 200px;
 }
 
-#player-total span, #house-total span {
-    font-family: 'League Gothic', sans-serif;
+#player-total span,
+#house-total span {
+    font-family: "League Gothic", sans-serif;
     text-transform: uppercase;
-    color: #7B76AF;
+    color: #7b76af;
 }
 
 #actions {
@@ -302,17 +314,21 @@ h1 {
 
 #split {
     scale: 75%;
-    color: #2C2370;
-    background-color: #ECFEFC;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    color: #2c2370;
+    background-color: #ecfefc;
+    transition:
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out;
 }
 
-#split:hover, #split:active {
+#split:hover,
+#split:active {
     color: #ffffff;
     background-color: #4e41b5;
 }
 
-#house, #cards {
+#house,
+#cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,54 +367,55 @@ h1 {
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
-  width: 150px;
-  height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background-color: transparent;
+    width: 150px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #FEF8EC;
-  color: black;
-  border-radius: 5px;
-  border: 5px solid #E93232;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #fef8ec;
+    color: black;
+    border-radius: 5px;
+    border: 5px solid #e93232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #E93232;
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: 5px;
-  border: 5px solid #FEF8EC;
+    background-color: #e93232;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    border: 5px solid #fef8ec;
 }
 
 #house-cards {
@@ -415,20 +432,20 @@ h1 {
 }
 
 .card-number {
-    color: #2F2C2C;
+    color: #2f2c2c;
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 36px;
-    font-family: 'League Gothic', sans-serif;
+    font-family: "League Gothic", sans-serif;
     margin: 0;
     text-transform: uppercase;
 }
 
 .red {
-    color: #E93232;
+    color: #e93232;
 }
 
 .black {
-    color: #2F2C2C;
+    color: #2f2c2c;
 }
