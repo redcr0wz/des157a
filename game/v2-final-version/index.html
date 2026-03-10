@@ -1,42 +1,42 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- NORMALIZE -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
         <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit&display=swap"
             rel="stylesheet"
-        />
+       >
 
         <!-- CSS AND JAVASCRIPT -->
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
         <title>Game On! - Blackjack</title>
     </head>
     <body>
-        <button id="settings-button"><img src="images/settings.svg" alt="settings" /></button>
+        <button id="settings-button"><img src="images/settings.svg" alt="settings"></button>
 
         <section id="start" class="active">
-            <div id="logo"><h1>Blackjack</h1><img src="images/logo.svg" alt="blackjack cards"/></div>
+            <div id="logo"><h1>Blackjack</h1><img src="images/logo.svg" alt="blackjack cards"></div>
             <button id="start-rules">Rules</button>
             <button id="start-game">Play</button>
         </section>
 
         <section id="bets" class="hidden">
             <h1>Bet?</h1>
-            <img src="images/chips.svg" alt="chips" />
+            <img src="images/chips.svg" alt="chips">
             <div id="betting">
-                <span>$ </span><input type="number" id="bet-money" name="bets" min="0"/>
-                <input type="submit" value="BET!" id="bet" />
+                <span>$ </span><input type="number" id="bet-money" name="bets" min="0" required>
+                <input type="submit" value="BET!" id="bet">
             </div>
-            <br />
+            <br>
             <button id="back">Back</button>
         </section>
 
@@ -44,7 +44,7 @@
             <div id="table"></div>
             <div id="house">
                 <div id="house-total">
-                    <h3>17</h3>
+                    <h2>#</h2>
                     <span>TOTAL</span>
                 </div>
 
@@ -53,7 +53,7 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <p class="card-number black">7</p>
-                                <img src="images/spade.svg" alt="spade" />
+                                <img src="images/spade.svg" alt="spade">
                             </div>
                             <div class="flip-card-back"></div>
                         </div>
@@ -63,7 +63,7 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <p class="card-number black">Q</p>
-                                <img src="images/club.svg" alt="club" />
+                                <img src="images/club.svg" alt="club">
                             </div>
                             <div class="flip-card-back"></div>
                         </div>
@@ -73,16 +73,16 @@
 
             <div id="actions">
                 <div id="main-actions">
-                    <button id="hit">Hit <img src="images/hit.svg" alt="hit" /></button>
-                    <button id="stand">Stand <img src="images/stand.svg" alt="stand" /></button>
+                    <button id="hit">Hit <img src="images/hit.svg" alt="hit"></button>
+                    <button id="stand">Stand <img src="images/stand.svg" alt="stand"></button>
                 </div>
 
-                <!-- <button id="split">Split <img src="images/split.svg" alt="split" /></button> -->
+                <!-- <button id="split">Split <img src="images/split.svg" alt="split"></button> -->
             </div>
 
             <div id="cards">
                 <div id="player-total">
-                    <h3>21</h3>
+                    <h2>#</h2>
                     <span>TOTAL</span>
                 </div>
                 <div id="player-cards">
@@ -90,7 +90,7 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <p class="card-number red">J</p>
-                                <img src="images/heart.svg" alt="heart" />
+                                <img src="images/heart.svg" alt="heart">
                             </div>
                             <div class="flip-card-back"></div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <p class="card-number red">A</p>
-                                <img src="images/diamond.svg" alt="diamond" />
+                                <img src="images/diamond.svg" alt="diamond">
                             </div>
                             <div class="flip-card-back"></div>
                         </div>
@@ -110,17 +110,17 @@
 
             <div id="money">
                 <h3>BET</h3>
-                <p>$100</p>
+                <p id="user-bet"></p>
 
                 <h3>FUNDS</h3>
-                <p>$200</p>
+                <p id="user-money"></p>
             </div>
         </section>
 
         <section id="end-screen" class="hidden">
             <h1>YOU WIN/LOSE!</h1>
             <button id="play-again">Play Again?</button>
-            <br />
+            <br>
             <button id="end-quit">Quit</button>
         </section>
 
@@ -130,26 +130,26 @@
                 <h2>Rules</h2>
                 <!-- TODO: polish rules -->
                 <p>
-                    In Blackjack, you play against the dealer. <br /><br />
+                    In Blackjack, you play against the dealer. <br><br>
                     Players receive all cards face up, and the dealer’s first card is face up and the second is face
                     down. The object of the game is to get closer to 21 than the dealer without going over 21.
-                    <br /><br />
+                    <br><br>
                     If a hand goes over 21, it is called a “bust” or “break,” and the wager is lost. In 21, Jacks,
                     Queens, Kings, and 10s count as 10. An Ace may be played as a one or an 11. All other cards are
                     played at face value.
-                    <br /><br />
+                    <br><br>
                     When you receive your first two cards, you may either “hit” or “stand.”
-                    <br /><br />
+                    <br><br>
                     When you "hit", you recieve another card. You may draw as many cards as you want until you are close
                     to 21 or until you “bust.”
-                    <br /><br />
+                    <br><br>
                     When you “stand,” it means you feel you are close enough to 21 and no longer wish any additional
                     cards, indicated by waving off with your hand.
-                    <br /><br />
+                    <br><br>
                     If you are closer to 21 than the dealer, you win and are paid an amount equal to your original
                     wager. If your hand is less than the dealer’s, you lose. If the dealer’s hand “busts” or “breaks,”
                     you win as well.
-                    <br /><br />
+                    <br><br>
                     Ties are a standoff or “push,” and your bet remains on the table.
                 </p>
             </div>
@@ -160,8 +160,11 @@
                 <button id="close-settings">&#x2715;</button>
                 <h2>Settings</h2>
                 <button id="settings-rules">Rules</button>
-                <button id="music">Music &#10003;</button>
+                <button id="music">Music &#10006;</button>
                 <button id="settings-quit">Quit</button>
+                <footer>
+                    <a href="sources.html">Sound Sources</a>
+                </footer>
             </div>
         </div>
     </body>

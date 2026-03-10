@@ -2,6 +2,19 @@
     "use strict";
     console.log("reading js");
 
+    // GAME VARIABLES //
+    
+    const gameData = {
+        userBet: 0,
+        userMoney: 0,
+        playerCards: [],
+        dealerCards: [],
+        playerTotal: 0,
+        dealerTotal: 0,
+        index: 0,
+        blackjack: 21,
+    }
+
     // START SCREEN + MODALS //
     const startScreen = document.querySelector("#start");
     const startBtn = document.querySelector("#start-game");
@@ -49,10 +62,16 @@
 
     // settings music
     const musicSettingsBtn = document.querySelector("#music"); 
+    const music = new Audio('sounds/music.mp3');
     
     musicSettingsBtn.addEventListener("click", function () {
-        musicSettingsBtn.innerHTML = "Music &#10006;";
-        // TODO: toggle music on/off
+        if (!music.paused) {
+            musicSettingsBtn.innerHTML = "Music &#10006;";
+            music.pause();
+        } else {
+            musicSettingsBtn.innerHTML = "Music &#10003;";
+            music.play();
+        }
     });
 
     // settings quit
@@ -65,15 +84,26 @@
     // BET SCREEN //
 
     const betBtn = document.querySelector("#bet");
+    const betSound = new Audio('sounds/bet.mp3');
     const betMoney = document.querySelector("#bet-money");
-
+    const userBetDisplay = document.querySelector("#user-bet");
+    const userMoneyDisplay = document.querySelector("#user-money");
     const gameScreen = document.querySelector("#game");
 
     betBtn.addEventListener("click", function () {
-        betsScreen.classList = "hidden";
-        gameScreen.classList = "active";
+        if (betMoney.value == null || betMoney.value == ""  || betMoney.value < 0) {
+            alert("Please enter a valid bet amount.");
+            return;
+        } else {
+            betSound.play();
+            betsScreen.classList = "hidden";
+            gameScreen.classList = "active";
 
-        // TODO: start game, get money
+            gameData.userBet = betMoney.value;
+
+            userBetDisplay.innerHTML = `$${gameData.userBet}`;
+            userMoneyDisplay.innerHTML = `$${gameData.userMoney}`;
+        }
     });
 
     const backBtn = document.querySelector("#back");
@@ -84,8 +114,8 @@
     });
 
     // TODO: BLACKJACK GAME //
-    const playerCards = document.getElementById("#player-cards");
-    const dealerCards = document.getElementById("#house-cards");
+    const playerCardsDiv = document.getElementById("#player-cards");
+    const dealerCardsDiv = document.getElementById("#house-cards");
     
     // GAME END SCREEN //
 
@@ -97,6 +127,9 @@
     playAgainBtn.addEventListener("click", function () {
         endScreen.classList = "hidden";
         betsScreen.classList = "active";
+
+        playerCardsDiv.innerHTML = "";
+        dealerCardsDiv.innerHTML = "";
 
         // TODO: play again with user money
     });
