@@ -17,7 +17,7 @@
 
         blackjack: 21,
         deck: [
-            {suit: "club", rank: "A",},
+            {suit: "club", rank: "A", value: 1},
             {suit: "club", rank: "2"},
             {suit: "club", rank: "3"},
             {suit: "club", rank: "4"},
@@ -75,8 +75,6 @@
         ],
     }
 
-    console.log(gameData.deck);
-
     function shuffle(array) {
         let currentIndex = array.length;
 
@@ -93,15 +91,13 @@
         }
     }
 
-    shuffle(gameData.deck);
-    console.log(gameData.deck);
-    
+
     function drawCard() {
         return gameData.deck.splice(0, 1);
     }
 
     function hit() {
-        //drawcard for player
+        // drawcard for player
         // put card in player array
     }
 
@@ -110,43 +106,100 @@
     }
 
     function houseTurn() {
-        // if under or equal to 17 - hit
-        // reference hit but change variables
-        // else stand
+        // flip card
+        if (gameData.houseTotal == gameData.blackjack) {
+            // house end...
+        } else if (gameData.houseTotal < 17) {
+            // hit
+        } else {
+            //stand
+        }
     }
 
-    function displayCard() {
-        // play flip sound
 
-        // innerhtml
+    function displayCard(rank, suit) {
+
+        
+
+        const cardHTML = `
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="card-number ${color}">${rank}</p>
+                        <img src="images/${suit}.svg" alt="${suit}">
+                    </div>
+                    <div class="flip-card-back"></div>
+                </div>
+            </div>
+        ` 
+
+        playerCardsDiv.innerHTML += cardHTML;
+    }
+
+    function gameStart() {
+        shuffle(gameData.deck);
+        // house has 1 card face up, 1 face down
+        // player gets both cards face up
+        // player has choice to hit or stand
+
+        calculateScore();
+    }
+
+    function calcluateTotal() {
+        // hlp
     }
 
     function calculateScore() {
+        // gameData.playerTotal =
+        // gameData.houseTotal =
         // if blackjack - player/house win
         //game end
         // continue game
         // update totals
 
         // if tie
+
+        // call gameEnd here
     }
 
-    function gameStart() {
-        //shuffle deck
-        // house has 1 card face up, 1 face down
-        // player gets both cards face up
-        // player has choice to hit or stand
-    }
+    const endScreenh1 = document.querySelector("#end-screen h1");
+    const winSound = new Audio('sounds/win.mp3');
+    const loseSound = new Audio('sounds/lose.mp3');
 
     function gameEnd() {
-        // calculateScore
+        if ((gameData.playerTotal == gameData.blackjack) && (gameData.houseTotal != gameData.blackjack) || 
+            (gameData.playerTotal > gameData.houseTotal) || 
+            (gameData.houseTotal > gameData.blackjack)) {
 
-        // cases
-        // if player busts -> player lose
-        // if a tie -> game ends
-        // if house busts -> player win
-        // if house higher or 21 -> house win
-        // if player higher or 21 -> player win
+            endScreenh1.innerHTML = "YOU WIN!";
+            gameScreen.classList = "hidden";
+            endScreen.classList = "active";
+            winSound.play();
+
+        } else if ((gameData.houseTotal == gameData.blackjack) && (gameData.houseTotal != gameData.blackjack) || 
+                   (gameData.houseTotal > gameData.playerTotal)) {
+            endScreenh1.innerHTML = "HOUSE WINS! YOU LOSE!";
+            gameScreen.classList = "hidden";
+            endScreen.classList = "active";
+            loseSound.play();
+
+        } else if (gameData.playerTotal > gameData.blackjack) {
+            endScreenh1.innerHTML = "BUST! YOU LOSE!";
+            gameScreen.classList = "hidden";
+            endScreen.classList = "active";
+            loseSound.play();
+
+        } else if (gameData.playerTotal == gameData.houseTotal) {
+            endScreenh1.innerHTML = "PUSH!";
+            gameScreen.classList = "hidden";
+            endScreen.classList = "active";
+        }
     }
+
+    function calcluateAce() {
+        // calculate if ace 1/11
+    }
+
 
     // START SCREEN + MODALS //
     const startScreen = document.querySelector("#start");
