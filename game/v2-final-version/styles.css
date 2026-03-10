@@ -66,7 +66,7 @@ input[type='number'] {
 	aspect-ratio: 1;
 	scale: 60%;
 	z-index: 1;
-	transition: background-color 0.5s ease-in-out,
+	transition: background-color 0.5s ease-in-out;
 }
 
 #settings-button:hover, 
@@ -235,7 +235,7 @@ h1 {
 	width: 300px;
 }
 
-#start-game {
+#start-game, #play-again {
 	font-size: 50px;
 	width: 500px;
 }
@@ -411,9 +411,13 @@ h1 {
 	transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card-inner.flip {
 	transform: rotateY(180deg);
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-front {
+	transform: scale(105%);
 }
 
 /* Position the front and back side */
@@ -423,6 +427,7 @@ h1 {
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
+	transition: transform 0.8s;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -475,4 +480,18 @@ h1 {
 
 .black {
 	color: #2f2c2c;
+}
+
+@keyframes dealCard {
+    0% {
+        transform: translateY(-500px) scale(1);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.deal-animation {
+    animation: dealCard 0.4s ease-out forwards;
 }

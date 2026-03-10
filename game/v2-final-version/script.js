@@ -5,12 +5,12 @@
     // GAME VARIABLES //
     
     const gameData = {
-        userBet: 0,
-        userMoney: 0,
+        playerBet: 0,
+        playerMoney: 0,
         playerCards: [],
-        dealerCards: [],
+        houseCards: [],
         playerTotal: 0,
-        dealerTotal: 0,
+        houseTotal: 0,
         index: 0,
         blackjack: 21,
     }
@@ -86,8 +86,8 @@
     const betBtn = document.querySelector("#bet");
     const betSound = new Audio('sounds/bet.mp3');
     const betMoney = document.querySelector("#bet-money");
-    const userBetDisplay = document.querySelector("#user-bet");
-    const userMoneyDisplay = document.querySelector("#user-money");
+    const playerBetDisplay = document.querySelector("#player-bet");
+    const playerMoneyDisplay = document.querySelector("#player-money");
     const gameScreen = document.querySelector("#game");
 
     betBtn.addEventListener("click", function () {
@@ -99,10 +99,10 @@
             betsScreen.classList = "hidden";
             gameScreen.classList = "active";
 
-            gameData.userBet = betMoney.value;
+            gameData.playerBet = betMoney.value;
 
-            userBetDisplay.innerHTML = `$${gameData.userBet}`;
-            userMoneyDisplay.innerHTML = `$${gameData.userMoney}`;
+            playerBetDisplay.innerHTML = `$${gameData.playerBet}`;
+            playerMoneyDisplay.innerHTML = `$${gameData.playerMoney}`;
         }
     });
 
@@ -115,7 +115,7 @@
 
     // TODO: BLACKJACK GAME //
     const playerCardsDiv = document.getElementById("#player-cards");
-    const dealerCardsDiv = document.getElementById("#house-cards");
+    const houseCardsDiv = document.getElementById("#house-cards");
     
     // GAME END SCREEN //
 
@@ -129,9 +129,9 @@
         betsScreen.classList = "active";
 
         playerCardsDiv.innerHTML = "";
-        dealerCardsDiv.innerHTML = "";
+        houseCardsDiv.innerHTML = "";
 
-        // TODO: play again with user money
+        // TODO: play again with player money
     });
 
     quitEndBtn.addEventListener("click", function () {
