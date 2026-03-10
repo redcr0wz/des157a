@@ -2,17 +2,150 @@
     "use strict";
     console.log("reading js");
 
-    // GAME VARIABLES //
+    // GAME VARIABLES + GAME FUNCTIONS //
     
     const gameData = {
         playerBet: 0,
         playerMoney: 0,
         playerCards: [],
-        houseCards: [],
         playerTotal: 0,
+
+        houseCards: [],
         houseTotal: 0,
+
         index: 0,
+
         blackjack: 21,
+        deck: [
+            {suit: "club", rank: "A",},
+            {suit: "club", rank: "2"},
+            {suit: "club", rank: "3"},
+            {suit: "club", rank: "4"},
+            {suit: "club", rank: "5"},
+            {suit: "club", rank: "6"},
+            {suit: "club", rank: "7"},
+            {suit: "club", rank: "8"},
+            {suit: "club", rank: "9"},
+            {suit: "club", rank: "10"},
+            {suit: "club", rank: "J"},
+            {suit: "club", rank: "Q"},
+            {suit: "club", rank: "K"},
+
+            {suit: "diamond", rank: "A"},
+            {suit: "diamond", rank: "2"},
+            {suit: "diamond", rank: "3"},
+            {suit: "diamond", rank: "4"},
+            {suit: "diamond", rank: "5"},
+            {suit: "diamond", rank: "6"},
+            {suit: "diamond", rank: "7"},
+            {suit: "diamond", rank: "8"},
+            {suit: "diamond", rank: "9"},
+            {suit: "diamond", rank: "10"},
+            {suit: "diamond", rank: "J"},
+            {suit: "diamond", rank: "Q"},
+            {suit: "diamond", rank: "K"},
+
+            {suit: "heart", rank: "A"},
+            {suit: "heart", rank: "2"},
+            {suit: "heart", rank: "3"},
+            {suit: "heart", rank: "4"},
+            {suit: "heart", rank: "5"},
+            {suit: "heart", rank: "6"},
+            {suit: "heart", rank: "7"},
+            {suit: "heart", rank: "8"},
+            {suit: "heart", rank: "9"},
+            {suit: "heart", rank: "10"},
+            {suit: "heart", rank: "J"},
+            {suit: "heart", rank: "Q"},
+            {suit: "heart", rank: "K"},
+
+            {suit: "spade", rank: "A"},
+            {suit: "spade", rank: "2"},
+            {suit: "spade", rank: "3"},
+            {suit: "spade", rank: "4"},
+            {suit: "spade", rank: "5"},
+            {suit: "spade", rank: "6"},
+            {suit: "spade", rank: "7"},
+            {suit: "spade", rank: "8"},
+            {suit: "spade", rank: "9"},
+            {suit: "spade", rank: "10"},
+            {suit: "spade", rank: "J"},
+            {suit: "spade", rank: "Q"},
+            {suit: "spade", rank: "K"},
+        ],
+    }
+
+    console.log(gameData.deck);
+
+    function shuffle(array) {
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+
+            // Pick a remaining element...
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+    }
+
+    shuffle(gameData.deck);
+    console.log(gameData.deck);
+    
+    function drawCard() {
+        return gameData.deck.splice(0, 1);
+    }
+
+    function hit() {
+        //drawcard for player
+        // put card in player array
+    }
+
+    function stand() {
+        // houseTurn
+    }
+
+    function houseTurn() {
+        // if under or equal to 17 - hit
+        // reference hit but change variables
+        // else stand
+    }
+
+    function displayCard() {
+        // play flip sound
+
+        // innerhtml
+    }
+
+    function calculateScore() {
+        // if blackjack - player/house win
+        //game end
+        // continue game
+        // update totals
+
+        // if tie
+    }
+
+    function gameStart() {
+        //shuffle deck
+        // house has 1 card face up, 1 face down
+        // player gets both cards face up
+        // player has choice to hit or stand
+    }
+
+    function gameEnd() {
+        // calculateScore
+
+        // cases
+        // if player busts -> player lose
+        // if a tie -> game ends
+        // if house busts -> player win
+        // if house higher or 21 -> house win
+        // if player higher or 21 -> player win
     }
 
     // START SCREEN + MODALS //
@@ -81,6 +214,7 @@
         location.reload(); 
     });
 
+
     // BET SCREEN //
 
     const betBtn = document.querySelector("#bet");
@@ -93,7 +227,6 @@
     betBtn.addEventListener("click", function () {
         if (betMoney.value == null || betMoney.value == ""  || betMoney.value < 0) {
             alert("Please enter a valid bet amount.");
-            return;
         } else {
             betSound.play();
             betsScreen.classList = "hidden";
@@ -114,9 +247,30 @@
     });
 
     // TODO: BLACKJACK GAME //
-    const playerCardsDiv = document.getElementById("#player-cards");
-    const houseCardsDiv = document.getElementById("#house-cards");
+    const playerCardsDiv = document.querySelector("#player-cards");
+    const houseCardsDiv = document.querySelector("#house-cards");
     
+
+    const hitBtn = document.querySelector("#hit");
+    const standBtn = document.querySelector("#stand");
+
+    hitBtn.addEventListener("click", function() {
+        hit();
+        calculateScore();
+
+        // if score = 21
+            houseTurn();
+
+        // else if > 21
+            houseTurn();
+    });
+
+    standBtn.addEventListener("click", function() {
+        houseTurn();
+        calculateScore();
+        // if else for score >= 21
+    });
+
     // GAME END SCREEN //
 
     // play again + quit
